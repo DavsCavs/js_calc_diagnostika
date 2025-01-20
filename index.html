@@ -25,7 +25,29 @@
             let secondNumberValue = parseFloat(secondNumber.value)
             let operatorValue = operator.value
 
-            console.log("button pressed")
+            // console.log("button pressed")
+
+            calculate(firstNumberValue, secondNumberValue, operatorValue)
+        }
+
+        let result = calculate(firstNumberValue, secondNumberValue, operatorValue)
+        output.innerHTML = `Rezultats = ${result}`
+
+        function calculate(num1, num2, operator){
+            switch(operator){
+            case "+":
+                return num1 + num2
+                break;
+            case "-":
+                return num1 - num2
+                break;
+            case "*":
+                return num1 * num2
+                break;
+            case "/":
+                return num1 / num2
+                break;
+            }
         }
     </script>
 </body>
